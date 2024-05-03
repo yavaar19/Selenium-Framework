@@ -16,7 +16,7 @@ public class ErrorValidations extends BaseClass {
 
         logIn.setUserCredentials("sadasd@gmail.com", "12345");
         logIn.logInApplication();
-        Assert.assertEquals(logIn.getErrorMessage(), "Incorrect email password.");
+        Assert.assertEquals(logIn.getErrorMessage(), "Incorrect email or password.");
 
     }
 
