@@ -69,10 +69,10 @@ public class BaseClass {
 
         readConfig = new ReadConfig();
 
-        // Getting system property from Maven command to see if broswer argument is set
+        // Getting system property from Maven command to see if browser argument is set
         // If set, then used the browser value from the maven command
         // Otherwise, use browser from configuration properties file
-        browser = System.getProperty("BROWSER")!=null ? System.getProperty("BROWSER").toLowerCase() :
+        browser = System.getProperty("browser")!=null ? System.getProperty("browser").toLowerCase() :
                 readConfig.getBrowser().toLowerCase();
 
         baseURL = System.getProperty("BASE_URL")!=null ? System.getProperty("BASE_URL").toLowerCase() :
