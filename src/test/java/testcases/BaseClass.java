@@ -3,10 +3,14 @@ package testcases;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pageobjects.LogIn;
@@ -32,10 +36,27 @@ public class BaseClass {
 
     public WebDriver initializeDriver() {
 
-        switch (browser) {
-            case "chrome" -> driver = new ChromeDriver();
-            case "firefox" -> driver = new FirefoxDriver();
-            case "safari" -> driver = new SafariDriver();
+        if (browser.contains("chrome")) {
+
+            ChromeOptions options = new ChromeOptions();
+
+            if (browser.contains("headless")) options.addArguments("headless");
+
+            driver = new ChromeDriver(options);
+            driver.manage().window().setSize(new Dimension(1440, 900));
+
+        } else if (browser.contains("firefox")) {
+
+            FirefoxOptions options = new FirefoxOptions();
+
+            if (browser.contains("headless")) options.addArguments("headless");
+
+            driver = new FirefoxDriver(options);
+
+        } else if (browser.contains("safari")) {
+
+            driver = new SafariDriver();
+
         }
 
         driver.manage().window().maximize();
