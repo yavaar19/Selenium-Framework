@@ -11,12 +11,12 @@ import java.util.List;
 public class Cart extends Base {
 
     @FindBy(css = ".cartSection h3")
-    List<WebElement> cartProducts;
+    private List<WebElement> cartProducts;
 
     @FindBy(css = ".totalRow button")
-    WebElement checkoutButton;
+    private WebElement checkoutButton;
 
-    By cartProductTableFindBy = By.cssSelector(".cartSection h3");
+    private final By cartProductTableFindBy = By.cssSelector(".cartSection h3");
 
     public Cart(WebDriver driver) {
 

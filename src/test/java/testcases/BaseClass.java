@@ -24,15 +24,15 @@ import java.util.List;
 
 public class BaseClass {
 
-    WebDriver driver;
+    protected WebDriver driver;
 
-    LogIn logIn;
+    protected LogIn logIn;
 
-    ReadConfig readConfig;
+    protected ReadConfig readConfig;
 
-    String browser;
+    private String browser;
 
-    String baseURL;
+    private String baseURL;
 
     public WebDriver initializeDriver() {
 

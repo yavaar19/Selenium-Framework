@@ -15,9 +15,9 @@ import static utilities.ExtentReporterNG.getReportObject;
 
 public class Listeners extends Screenshot implements ITestListener {
 
-    ExtentTest test;
-    ExtentReports extent = getReportObject();
-    WebDriver driver;
+    private ExtentTest test;
+    private ExtentReports extent = getReportObject();
+    private WebDriver driver;
 
     // ThreadLocal allows test to run in parallel
     // without having overlap between test reporting

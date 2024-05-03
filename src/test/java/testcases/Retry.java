@@ -5,8 +5,8 @@ import org.testng.ITestResult;
 
 public class Retry implements IRetryAnalyzer {
 
-    int count = 0;
-    int maxTries = 2;
+    private int count = 0;
+    private int maxTries = 2;
 
 
     // Test will always retry so long as the method returns

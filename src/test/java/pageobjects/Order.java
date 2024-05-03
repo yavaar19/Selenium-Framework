@@ -11,13 +11,13 @@ import java.util.List;
 public class Order extends Base {
 
     @FindBy(css = "tr.ng-star-inserted")
-    List<WebElement> orderedProducts;
+    private List<WebElement> orderedProducts;
 
-    By orderRowsFindBy = By.cssSelector("tr.ng-star-inserted");
+    private final By orderRowsFindBy = By.cssSelector("tr.ng-star-inserted");
 
-    By orderNumberFindBy = By.cssSelector("th");
+    private final By orderNumberFindBy = By.cssSelector("th");
 
-    By productNameFindBy = By.cssSelector("td:nth-child(3)");
+    private final By productNameFindBy = By.cssSelector("td:nth-child(3)");
 
     public Order(WebDriver driver) {
 

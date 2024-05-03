@@ -9,12 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 public class Confirmation extends Base {
 
     @FindBy(css = ".hero-primary")
-    WebElement thankYouMessage;
+    private WebElement thankYouMessage;
 
     @FindBy(css = "label.ng-star-inserted")
-    WebElement orderNumber;
+    private WebElement orderNumber;
 
-    By thankYouMessageFindBy = By.cssSelector(".hero-primary");
+    private final By thankYouMessageFindBy = By.cssSelector(".hero-primary");
 
     public Confirmation(WebDriver driver) {
 

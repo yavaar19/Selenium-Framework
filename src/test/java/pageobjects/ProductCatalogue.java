@@ -11,16 +11,16 @@ import java.util.List;
 public class ProductCatalogue extends Base {
 
     @FindBy(css = ".mb-3")
-    List<WebElement> productElements;
+    private List<WebElement> productElements;
 
     @FindBy(css = ".ng-animating")
-    WebElement loadingAnimation;
+    private WebElement loadingAnimation;
 
-    By productListFindBy = By.cssSelector(".mb-3");
+    private final By productListFindBy = By.cssSelector(".mb-3");
 
-    By productAddToCartButtonFindBy = By.cssSelector("div.card-body button:last-of-type");
+    private final By productAddToCartButtonFindBy = By.cssSelector("div.card-body button:last-of-type");
 
-    By toastConfirmationFindBy = By.id("toast-container");
+    private final By toastConfirmationFindBy = By.id("toast-container");
 
     public ProductCatalogue(WebDriver driver) {
 

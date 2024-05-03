@@ -8,16 +8,16 @@ import org.openqa.selenium.support.PageFactory;
 public class LogIn extends Base {
 
     @FindBy(id="userEmail")
-    WebElement userEmail;
+    private WebElement userEmail;
 
     @FindBy(id="userPassword")
-    WebElement userPassword;
+    private WebElement userPassword;
 
     @FindBy(id="login")
-    WebElement loginButton;
+    private WebElement loginButton;
 
     @FindBy(css="[class*='flyInOut']")
-    WebElement errorToast;
+    private WebElement errorToast;
 
     public LogIn(WebDriver driver) {
 

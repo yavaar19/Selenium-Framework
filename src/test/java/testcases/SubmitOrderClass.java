@@ -10,8 +10,8 @@ import java.io.IOException;
 
 public class SubmitOrderClass extends BaseClass {
 
-    String productName = "ADIDAS ORIGINAL";
-    String orderNumber;
+    private String productName = "ADIDAS ORIGINAL";
+    private String orderNumber;
 
     @Test(dataProvider = "getData", groups = {"Purchase"})
     public void submitOrder(String username, String password, String productName, String country) throws IOException {

@@ -11,15 +11,15 @@ import java.util.List;
 public class CheckOut extends Base {
 
     @FindBy(css = ".form-group input")
-    WebElement countryInput;
+    private WebElement countryInput;
 
     @FindBy(css = ".form-group button span")
-    List<WebElement> options;
+    private List<WebElement> options;
 
     @FindBy(css = "div[class='actions'] a")
-    WebElement placeOrderButton;
+    private WebElement placeOrderButton;
 
-    By countrySelectionFindBy = By.cssSelector(".form-group button span");
+    private final By countrySelectionFindBy = By.cssSelector(".form-group button span");
 
     public CheckOut(WebDriver driver) {
 
