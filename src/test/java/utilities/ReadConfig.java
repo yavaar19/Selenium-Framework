@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class ReadConfig {
 
-    Properties properties;
+    private final Properties properties;
 
     public ReadConfig() throws IOException {
 

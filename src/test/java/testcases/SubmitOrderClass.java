@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 import pageobjects.*;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
 
 public class SubmitOrderClass extends BaseClass {
 
@@ -174,8 +176,8 @@ public class SubmitOrderClass extends BaseClass {
 //
 //    }
 //
-//    // DataProvider using hashmap
-//    // creating Hashmap from JSON file
+    // DataProvider using hashmap
+    // creating Hashmap from JSON file
 //    @DataProvider
 //    public Object[][] getData() throws IOException {
 //

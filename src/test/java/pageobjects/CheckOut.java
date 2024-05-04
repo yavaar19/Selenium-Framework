@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+import java.util.Optional;
 
 public class CheckOut extends Base {
 
@@ -43,8 +44,15 @@ public class CheckOut extends Base {
 
     public void selectOption(String country) {
 
-        options.stream().filter(option -> option.getText().trim()
-                .equalsIgnoreCase(country)).findFirst().orElse(null).click();
+        Optional<WebElement> optionalWebElement = options.stream().filter(option -> option.getText().trim()
+                .equalsIgnoreCase(country)).findFirst();
+
+        if (optionalWebElement.isPresent()) {
+
+            options.get(0).click();
+
+        }
+
 
     }
 
