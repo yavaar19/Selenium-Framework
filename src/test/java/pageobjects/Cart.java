@@ -41,7 +41,6 @@ public class Cart extends Base {
     public CheckOut clickCheckoutButton() {
 
         checkoutButton.click();
-
         return new CheckOut(driver);
 
     }
