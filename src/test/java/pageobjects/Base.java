@@ -13,8 +13,6 @@ import java.time.Duration;
 
 public class Base {
 
-    // New Comments
-
     @FindBy(css = "button[routerlink*='cart']")
     WebElement cartButton;
 
